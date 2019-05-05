@@ -12,9 +12,8 @@ export class RegisterComponent implements OnInit {
 
   pers: Pers;
   data: Array<Pers>;
-  datos: Pers[];
 
-  constructor(private Servicios: ServiciosService) { }
+  constructor(private Servicios: ServiciosService) {}
 
   ngOnInit() {
     this.get();
@@ -25,7 +24,6 @@ export class RegisterComponent implements OnInit {
     this.Servicios.get('pers').subscribe(
         response => {
             this.data = response as Array<Pers>;
-            console.log(this.data); //muestra en consola            
         },
         error => {
             console.log(error);

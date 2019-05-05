@@ -87,8 +87,7 @@
     </form>
 </div>
 
-<!-- --------------------------------------------------------  -->
-
+<br>
 
 <button type="submit" class="btn btn-success" (click)="get(pers)"><i class="fa fa-user-plus"></i>Traer Datos</button>
 
@@ -96,7 +95,6 @@
  <table class="table table-hover">
     <thead>
     <tr>
-        <td>ID</td>
         <td>APELLIDOS Y NOMBRES</td>
         <td>CORREO ELECTRONICO</td>
         <td>CLAVE</td>
@@ -104,8 +102,7 @@
     </thead>
   
     <tbody>
-        <tr *ngFor="let dato of datos">
-            <td>{{ pers.pers_sec }}</td>
+        <tr *ngFor="let pers of data">
             <td>{{ pers.pers_nom }}</td>
             <td>{{ pers.pers_cor_ele }}</td>
             <td>{{ pers.pers_cla }}</td>
