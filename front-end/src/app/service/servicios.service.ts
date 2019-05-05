@@ -20,4 +20,5 @@ export class ServiciosService {
   put(url:string,data:any){
     return this.http.put(environment.API_URL+url,data);
   };
+
 }

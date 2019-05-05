@@ -12,20 +12,20 @@ export class RegisterComponent implements OnInit {
 
   pers: Pers;
   data: Array<Pers>;
+  datos: Pers[];
 
   constructor(private Servicios: ServiciosService) { }
 
   ngOnInit() {
-    // this.get();
+    this.get();
     this.pers = new Pers();
   }
-
 
   get() {
     this.Servicios.get('pers').subscribe(
         response => {
             this.data = response as Array<Pers>;
-            console.log(this.data); //muestra en consola
+            console.log(this.data); //muestra en consola            
         },
         error => {
             console.log(error);
@@ -44,5 +44,7 @@ post(){
       
 );
 }
+
+
 
 }
