@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // RUTAS
 app.get('/pers', routesCtrl.getAll)
 app.post('/pers', routesCtrl.post)
+app.put('/pers/:pers_sec', routesCtrl.put)
+app.delete('/pers/:pers_sec', routesCtrl.kill)
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
