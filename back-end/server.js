@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // RUTAS
-app.get('/pers', routesCtrl.getAll)
+app.get('/pers', routesCtrl.get)
 app.post('/pers', routesCtrl.post)
 app.put('/pers/:pers_sec', routesCtrl.put)
 app.delete('/pers/:pers_sec', routesCtrl.kill)

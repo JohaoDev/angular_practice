@@ -1,13 +1,13 @@
 const knex = require('./knex/knex')
 
 module.exports = {
-    getAll,
+    get,
     post,
     put,
     kill
 };
 
-function getAll(req, res) {
+function get(req, res) {
     knex.select()
         .from('pers')
         .then( pers => res.send(pers));
@@ -24,13 +24,6 @@ function post(req, res) {
             .from('pers')
             .then( pers => res.send(pers));
     })  
-}
-
-function getbyid(req, res) {
-    knex.select()
-        .from('pers')
-        .where('pers_sec', req.body.pers_sec)
-        .then( pers => res.send(pers));
 }
 
 function put(req, res) {
